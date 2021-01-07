@@ -25,9 +25,14 @@
     <a [routerLink]="['/forgotpassword']" id="forgot">Forgot Password?</a>
    </form>
 </div>
+
+<div *ngIf="msg">
+    {{msg}}
+</div>
+
 <br>
 <div class="register">
-    New User ? <a href="#">Register here</a>
+    New User ? <a [routerLink]="['/registerCustomer']">Register here</a>
 </div>
 
 

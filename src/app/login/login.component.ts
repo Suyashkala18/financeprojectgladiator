@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   customer:any;
   loginForm!: FormGroup;
   submitted = false;
+  msg:any;
   constructor(private formBuilder:FormBuilder,private customerService:CustomerServiceService) {
     this.customer = new Customer();
    }
@@ -26,5 +27,10 @@ export class LoginComponent implements OnInit {
 
   loginCheck(){
     this.submitted = true;
+    this.customerService.loginCHeckFromApi(this.customer).subscribe(
+      c => this.customer = c,
+      err => this.msg = err.error.Message);
+    }
   }
-}
+
+
