@@ -47,7 +47,7 @@ submitted=false;
     this.customerService.registerCustomerFromApi(this.customer).subscribe(c=>{
       this.customer=c;
     })
-
+    
   }
 
 }
