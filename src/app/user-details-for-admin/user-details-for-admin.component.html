@@ -2,7 +2,7 @@
 <table border="1" align="center" width=97%>
     <p id="p01">ADMIN PAGE<p>
     <br><br><br><br>
-    <button class="btn btn-success" (click)="getCustomers()">User Details</button>
+    <!-- <button class="btn btn-success" (click)="getCustomers()">User Details</button> -->
     <table class="table table-striped" border="1">
     <thead>
         <tr>
@@ -39,7 +39,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <a [routerLink]="['/activateUser']">activate</a>
+                    <button (click)="statusUpdate(1,cust)">{{cust.Status}}</button>
                 </td>
             </tr>
         </tbody>

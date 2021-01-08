@@ -44,6 +44,8 @@ submitted=false;
 
   registerCustomer(){
     this.submitted=true;
+    
+    this.customer.status = "Deactivated";
     console.log(this.customer);
     this.customerService.registerCustomerFromApi(this.customer).subscribe(c=>{
       this.customer=c;

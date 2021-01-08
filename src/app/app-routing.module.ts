@@ -21,9 +21,10 @@ const routes: Routes = [
   {path:'productList',component:ProductlistComponent},
   {path:'forgotpassword',component:ForgotpasswordComponent},
   {path:'changepassword',component:ChangepasswordComponent},
-  {path:'userDetails',component:UserDetailsForAdminComponent},
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'userDetails/:adminId',component:UserDetailsForAdminComponent},
   {path:'activateUser',component:ActivateUserComponent},
-  {path:'',redirectTo:'home',pathMatch:'full'}
+  {path:'dashboard/:customerId',component:DashboardComponent}
 ];
 
 @NgModule({

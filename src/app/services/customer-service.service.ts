@@ -10,7 +10,7 @@ export class CustomerServiceService {
   constructor(private httpClient:HttpClient) {
 
    }
-   
+
    public registerCustomerFromApi(customer:Customer){
      return this.httpClient.post("http://localhost:65456/api/customer/register",customer);
    }
@@ -20,9 +20,12 @@ export class CustomerServiceService {
 
    }
    public loginCHeckFromApi(customer:Customer){​​
-
     return this.httpClient.post("http://localhost:65456/api/customer/Login",customer);
-    debugger;
-
   }​​
+  public getCardByCustomerId(id:number){
+    return this.httpClient.get("http://localhost:65456/api/card/"+id);
+  }
+  public getCustomerById(id:number){
+    return this.httpClient.get("http://localhost:65456/api/customer/"+id);
+  }
 }
